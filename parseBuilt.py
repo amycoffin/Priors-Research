@@ -12,27 +12,19 @@ caseData objects (arrays of dictionaries) that correspond to multiple discordanc
  caseSeanCollect (seanPriorsData) objects originate from seanFile.txt ('mod_res_dn_brca20160525.txt' in calcVarPriors)"""
 
 caseDirectory = {} #will tell you which cases correspond with which applicable priors arguments
+
 """Likely to be resolved cases"""
 
 """Case 1 is not in a key domain and should be 0.02"""
 caseList1 = bp.concordanceCaseCreate('0.02', '0.81') #returns a list that meets the seans prior, our prior args criteria
 caseDirectory['case1'] = ('0.02', '0.81')
-print len(caseList1)
-#print caseDict['case1']
 caseBuiltCollect1 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList1)
 caseSeanCollect1 = bp.getCaseDataFromSean(caseList1)
-#print 'time for built:'
-# for var in caseBuiltCollect1:
-#     print var['applicablePrior']
-# print 'time for seans:'
-# for var in caseSeanCollect1:
-#     print var['applicable_prior']
 
 """Case 2 is a start codon mutation, and should be 0.96"""
 caseList2 = bp.concordanceCaseCreate('0.96', '0.03') #originates from priors_concordance.tsv
 #args are sean's applicable prior, our applicable prior
 caseDirectory['case2'] = ('0.96', '0.03')
-print len(caseList2)
 caseBuiltCollect2 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList2) #origniates from built.tsv
 caseSeanCollect2 = bp.getCaseDataFromSean(caseList2) #originates from seanFile.txt (weird file name in brcaex repo)
 
@@ -41,7 +33,6 @@ Protein prior should be 0.81"""
 caseList3 = bp.concordanceCaseCreate('0.81', '0.02')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case3'] = ('0.81', '0.02')
-print len(caseList3)
 caseBuiltCollect3 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList3)
 caseSeanCollect3 = bp.getCaseDataFromSean(caseList3)
 
@@ -51,7 +42,6 @@ protein_prior = 0.02 in source file used by calcVarPriors.py, and an applicable 
 caseList4 = bp.concordanceCaseCreate('0.97','0.34')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case4'] = ('0.97','0.34')
-print len(caseList4)
 caseBuiltCollect4 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList4)
 caseSeanCollect4 = bp.getCaseDataFromSean(caseList4)
 
@@ -59,14 +49,12 @@ caseSeanCollect4 = bp.getCaseDataFromSean(caseList4)
 caseList5 = bp.concordanceCaseCreate('0.66', '0.02')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case5'] = ('0.66', '0.02')
-print len(caseList5)
 caseBuiltCollect5 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList5)
 caseSeanCollect5 = bp.getCaseDataFromSean(caseList5)
 
 caseList6 = bp.concordanceCaseCreate('0.96', '0.29')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case6'] = ('0.96', '0.29')
-print len(caseList6)
 caseBuiltCollect6 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList6)
 caseSeanCollect6 = bp.getCaseDataFromSean(caseList6)
 
@@ -75,35 +63,30 @@ caseSeanCollect6 = bp.getCaseDataFromSean(caseList6)
 caseList7 = bp.concordanceCaseCreate('0.02', '0.29')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case7'] = ('0.02', '0.29')
-print len(caseList7)
 caseBuiltCollect7 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList7)
 caseSeanCollect7 = bp.getCaseDataFromSean(caseList7)
 
 caseList8 = bp.concordanceCaseCreate('0.02', '0.66')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case8'] = ('0.02', '0.66')
-print len(caseList8)
 caseBuiltCollect8 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList8)
 caseSeanCollect8 = bp.getCaseDataFromSean(caseList8)
 
 caseList9 = bp.concordanceCaseCreate('0.29', '0.02')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case9'] = ('0.29', '0.02')
-print len(caseList9)
 caseBuiltCollect9 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList9)
 caseSeanCollect9 = bp.getCaseDataFromSean(caseList9)
 
 caseList10 = bp.concordanceCaseCreate('0.3', '0.03')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case10'] = ('0.3', '0.03')
-print len(caseList10)
 caseBuiltCollect10 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList10)
 caseSeanCollect10 = bp.getCaseDataFromSean(caseList10)
 
 caseList11 = bp.concordanceCaseCreate('0.02', '0.3')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case11'] = ('0.02', '0.3')
-print len(caseList11)
 caseBuiltCollect11 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList11)
 caseSeanCollect11 = bp.getCaseDataFromSean(caseList11)
 
@@ -111,26 +94,23 @@ caseSeanCollect11 = bp.getCaseDataFromSean(caseList11)
 caseList12 = bp.concordanceCaseCreate('0.96', '0.81')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case12'] = ('0.96', '0.81')
-print len(caseList12)
 caseBuiltCollect12 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList12)
 caseSeanCollect12 = bp.getCaseDataFromSean(caseList12)
 
 caseList13 = bp.concordanceCaseCreate('0.5', '0.99')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case13'] = ('0.5', '0.99')
-print len(caseList13)
 caseBuiltCollect13 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList13)
 caseSeanCollect13 = bp.getCaseDataFromSean(caseList13)
 
 caseList14 = bp.concordanceCaseCreate('0.5', '0.97')
 #args are sean's applicable prior first, our applicable prior second
 caseDirectory['case14'] = ('0.5', '0.97')
-print len(caseList14)
 caseBuiltCollect14 = bp.getCaseDataFromBuilt("built_with_priors.tsv", caseList14)
 caseSeanCollect14 = bp.getCaseDataFromSean(caseList14)
 
 f = open("discordanceCases.py", 'w')
-f.write('caseDictionary = ' + str(caseDirectory) + '\n' +
+f.write('caseDirectory = ' + str(caseDirectory) + '\n' +
         'caseList1 = ' + str(caseList1) + '\n' + 'seanPriorsData1 = ' + str(caseSeanCollect1) + '\n' + 'builtPriorsData1 = ' + str(caseBuiltCollect1) + '\n' +
         'caseList2 = ' + str(caseList2) + '\n' + 'seanPriorsData2 = ' + str(caseSeanCollect2) + '\n' + 'builtPriorsData2 = ' + str(caseBuiltCollect2) + '\n' +
         'caseList3 = ' + str(caseList3) + '\n' + 'seanPriorsData3 = ' + str(caseSeanCollect3) + '\n' + 'builtPriorsData3 = ' + str(caseBuiltCollect3) + '\n' +
