@@ -3,7 +3,7 @@ import csv
 
 """This module prints cases of priors discordances and outputs (discordanceCases.py) a caseDirectory as well as multiple 
 caseData objects (arrays of dictionaries) that correspond to multiple discordance data criteria. caseDict provides
- the case number as values and the a tuple of priors criteria arguments (seans, brcaexchange) as keys. caseData objects 
+ the case number as keys and the a tuple of priors criteria arguments (seans, brcaexchange) as values. caseData objects 
  come in the form of 'seanPriorsData' or 'builtPriorsData', each numbered according to the case that they correspond 
  with.
  
